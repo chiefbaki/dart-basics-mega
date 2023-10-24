@@ -20,7 +20,6 @@ void main(){
       print("Не является високосным");
     }
   }*/
-
   // third task 
   /*int a = int.parse(stdin.readLineSync()!);
   int b = int.parse(stdin.readLineSync()!);
