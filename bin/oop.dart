@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:math';
 
 void main(){
@@ -54,7 +53,7 @@ class Student{
   void avgScore(){
     double cnt = 0;
     for (var i = 0 ; i < lstScore.length; i++){
-      cnt += this.lstScore[i];
+      cnt += lstScore[i];
     }
     print("Average score: $cnt");
   
@@ -113,7 +112,7 @@ class Rectangle{
   Rectangle({required this.height, required this.width});
 
   int getSquare(){
-    return this.height * this.width;
+    return height * width;
   }
 
   int getPerimeter(){
@@ -186,6 +185,7 @@ class Employee{
 }
 
 class Triangle{
+  
   final int a, b, c;
   Triangle(this.a, this.b, this.c);
 

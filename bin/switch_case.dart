@@ -133,7 +133,6 @@ void performAction(){
       break;
     case '5':
       exit(0);
-      break;
     default:
       print('Попробовать еще раз');
       performAction();

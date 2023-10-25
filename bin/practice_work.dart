@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main(){
   List<int> lst = [10, -5, 1, -2, 4, 8, 5, 22];
   //print(uniqEl(lst));
