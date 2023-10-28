@@ -1,21 +1,22 @@
 void main(){
   List<int> lst = [10, -5, 1, -2, 4, 8, 5, 22];
+  print(max(lst));
   //print(uniqEl(lst));
   //print(evenSum(lst)); // 3
   //sort(lst);
-  maxEven(lst);
+  //maxEven(lst);
 }
 
 // Напишите программу, которая находит и выводит на экран наибольший
 // элемент в данном массиве чисел, а также его индекс
-int max(List<int> lst){
+String max(List<int> lst){
   int max = 0;
   for ( var i = 0; i < lst.length; i++ ){
     if (lst[i] > max) {
       max = lst[i];
     }
   }
-  return max;
+  return "Max: $max\nIndex: ${lst.indexOf(max)}";
 }
 
 // Напишите программу, которая проверяет, все ли элементы в массиве уникальны (не повторяются).
