@@ -3,25 +3,38 @@ import 'dart:io';
 void main(){
   //calc();
   //type();
-  performAction();
+  // performAction();
+  tax();
 }
 
-// void tax(double sum){
-//   double taxRate = 0.0;
-//   switch(sum){
-//   case double.infinity:
-//       print(sum*0.12);
-//       break;
-//     default:
-//       if (sum <= 10000) {
-//         taxRate = 0;
-//       } else if (sum <= 50000) {
-//         print(sum*0.1);
-//       }
-//       break;
-//   }
-//   // print("Сумма налога на доход: ${sum * taxRate}");
-// }
+/// Напишите программу, которая принимает сумму дохода и определяет процент налога на доход в зависимости 
+/// от суммы. Например, доход до $10,000 не облагается налогом, доход от $10,001 до $50,000 облагается 
+/// 10% налогом, и свыше 50000 налог - 12%;
+void tax(){
+  stdout.write('Введите сумму дохода: ');
+  double income = double.parse(stdin.readLineSync()!);
+
+  double taxRate;
+
+  switch (income) {
+    case double.negativeInfinity:
+    case double.infinity:
+    case double.nan:
+      print('Сумма дохода некорректна.');
+      break;
+    default:
+      if (income <= 10000) {
+        taxRate = 0.0;
+      } else if (income <= 50000) {
+        taxRate = 0.10;
+      } else {
+        taxRate = 0.12;
+      }
+      double taxAmount = income * taxRate;
+      print('Сумма налога: \$${taxAmount.toStringAsFixed(2)}');
+      break;
+  }
+}
 
 // Создайте калькулятор, который выполняет математические операции (сложение, вычитание, умножение, деление)
 // в зависимости от оператора, введенного пользователем.
